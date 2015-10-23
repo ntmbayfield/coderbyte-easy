@@ -23,6 +23,7 @@
 //   return newStr.replace(/[aeiou]/g, function(letter) {return letter.toUpperCase()});        
 // }
 
+//much cleaner solution
 function LetterChanges(str) { 
   //empty string
   var newString = "";
