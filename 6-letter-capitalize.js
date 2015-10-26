@@ -1,13 +1,17 @@
 function LetterCapitalize(str) { 
 
-  var arrayed = str.split(" ");
+  //splits string-sentence into stringified words wrapped in a container array
+  var arrayify = str.split(" ");
   var outputArray = [];
 
-  for ( var i = 0; i < arrayed.length; i ++ ) {
-    var firstWord = arrayed[i].charAt(0).toUpperCase();
-    var restOfString = arrayed[i].slice(1);
+  //for-loop passing along the length of the arrayified str
+  for ( var i = 0; i < arrayify.length; i ++ ) {
+    //capitalizes the first letter of each word along arrayify's length
+    var firstLetter = arrayify[i].charAt(0).toUpperCase();
+    //snips the rest of the 
+    var restOfStringWord = arrayify[i].slice(1);
 
-    outputArray[i] = firstWord + restOfString;
+    outputArray[i] = firstLetter + restOfStringWord;
   }
 
   return outputArray.join(" "); 
