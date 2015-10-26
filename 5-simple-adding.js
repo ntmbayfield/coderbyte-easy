@@ -22,7 +22,7 @@
 //   }      
 // }
 
-//Gaussian solution - very clean
+//Gaussian solution - very clean, elegant
 //  suppose num = 100
 //  correct output should be 5050
 //  num + 1 = 101
