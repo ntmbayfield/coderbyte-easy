@@ -17,13 +17,14 @@
 function SimpleSymbols(str) {  
   //for-loop passing along the length of the string
   for (var i = 0; i < str.length; i++) {
-    //if str[i] is an a-z letter (either lower or uppercase)
+    //if a-z (either lower or uppercase) exists at string at i, then
     if (/[a-zA-Z]/.test(str[i])) {
-
+      //if either string at i's left-and-right neighbor AREN'T "+"s, then
       if ((str[i + 1] != "+") || (str[i - 1] != "+")) {
         return false;
       }
     }
   }
+  //if not false, then true
   return true;
 }
