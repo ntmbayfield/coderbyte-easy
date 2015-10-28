@@ -17,11 +17,12 @@
 function SimpleSymbols(str) {  
   //for-loop passing along the length of the string
   for (var i = 0; i < str.length; i++) {
-    //if string at i has 
+    //if str[i] is an a-z letter (either lower or uppercase)
     if (/[a-zA-Z]/.test(str[i])) {
-     if ((str[i + 1] != "+") || (str[i - 1] != "+")) {
-       return false;
-     }
+
+      if ((str[i + 1] != "+") || (str[i - 1] != "+")) {
+        return false;
+      }
     }
   }
   return true;
