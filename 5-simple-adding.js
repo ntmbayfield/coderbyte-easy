@@ -2,6 +2,10 @@
 // numbers from 1 to num. For the test cases, the
 // parameter num will be any number from 1 to 1000. 
 
+// Correct Sample Outputs
+// Input = 12   ||  Output = 78
+// Input = 140  ||  Output = 9870
+
 //  Old Solution
 // function SimpleAdding(num) { 
 //   //if argument is not a number

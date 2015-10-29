@@ -2,6 +2,10 @@
 // parameter being passed and capitalize the first letter
 // of each word. Words will be separated by only one space. 
 
+// Correct Sample Outputs
+// Input = "hello world"  ||  Output = "Hello World"
+// Input = "i ran there"  ||  Output = "I Ran There"
+
 function LetterCapitalize(str) { 
 
   //splits string-sentence into stringified words wrapped in a container array
