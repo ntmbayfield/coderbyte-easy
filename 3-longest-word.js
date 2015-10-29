@@ -1,3 +1,13 @@
+// have the function LongestWord(sen) take the sen parameter
+// being passed and return the largest word in the string. If
+// there are two or more words that are the same length, return
+// the first word from the string with that length. Ignore
+// punctuation and assume sen will not be empty. 
+
+// Correct Sample Outputs
+// Input = "fun&!! time"  ||  Output = "time"
+// Input = "I love dogs"  ||  Output = "love"
+
 //This is my old solution -- passes 4/5 tests
 // function LongestWord(sen) { 
 //   var individualWords = sen.split(" ");

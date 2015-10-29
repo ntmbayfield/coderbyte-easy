@@ -5,6 +5,10 @@
 // capitalize every vowel in this new string (a, e, i, o, u)
 // and finally return this modified string.
 
+// Correct Sample Outputs
+// Input = "hello*3"     ||  Output = "Ifmmp*3"
+// Input = "fun times!"  ||  Output = "gvO Ujnft!"
+
 //old solution -- can't make any sense of it.
 // function LetterChanges(str) { 
 //   var alphabet = "abcdefghijklmnopqrstuvwxyz";
