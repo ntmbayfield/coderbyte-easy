@@ -6,10 +6,11 @@
 // For example: if str is 9:00am-10:00am then the output should
 // be 60. If str is 1:00pm-11:00am the output should be 1320. 
 
-// Input = "12:30pm-12:00am"
-// Output = 690
-// Input = "1:23am-1:08am"
-// Output = 1425
+// Sample 1
+// Input = "12:30pm-12:00am" || Output = 690
+
+// Sample 2
+// Input = "1:23am-1:08am"   || Output = 1425
 
 function CountingMinutesI(str) {
   //arrayifies and splits string into starting time and ending time
@@ -54,7 +55,7 @@ function CountingMinutesI(str) {
     endTimeHour -= 12;
   };
 
-  // case 1: if startTime is greater than endTime
+  // case 1: startTime is greater than endTime
   if ((startTimeHour > endTimeHour) || ((startTimeHour === endTimeHour) && (startTimeMinute > endTimeMinute))) {
     //subtract their difference from all the minutes in a full day
     return (((endTimeHour - startTimeHour) * 60) + (endTimeMinute - startTimeMinute)) + 1440
