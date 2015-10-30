@@ -10,14 +10,50 @@
 // Input = "Hello apple pie"  ||  Output = "Hello"
 // Input = "No words"         ||  Output = -1
 
-function LetterCountI(str) { 
-  var arrayify = str.split(" ");
-  //arrayify = ["Hello", "apple", "pie"];
+function LetterCountI(str){
+  var wordsAndLetters = {};   
+  var count = 0;
+  var finalWord;
+  //splits str into array of individual words
+  var wordArray = str.split(" ");
+  //for-loop passing along the length of wordArray
+  for ( var i = 0; i < wordArray.length; i++ ) {
+    //populates wordsAndLetters object with wordArray elements as keys and value 0
+    wordsAndLetters[wordArray[i]] = wordsAndLetters[wordArray[i]] || 0;
+  }
+  function countWordLetters(word) {
+    //splits word argument into individual letters as strings
+    var letterString = word.split("");
+    var letterCount = {};
+    //for-loop passing along the length of letterString array
+    for ( var i = 0; i < letterString.length; i++ ) {
+      //populates letterCount object with each unique letter, stringified, as keys and value 1;
+      letterCount[letterString[i]] = letterCount[letterString[i]] || 0;
+      //instances of the same letter increment value counter
+      letterCount[letterString[i]]++;
+    }
+    return letterCount;
+  }
+  //for-in loop passing along each words in wordsAndLetters object
+  for ( var words in wordsAndLetters ) {
+    //sets wordsAndLetters keys equal to outcome of countWordLetters function with argument words
+    wordsAndLetters[words] = countWordLetters(words);
 
-  var wordSplit = arrayify[0].split("");
-  // wordSplit = ["H", "e", "l", "l", "o"]
-  
-  // code goes here  
-  return str; 
-         
+    var highestLetterFrequency = wordsAndLetters[words];
+    //for-in loop passing through each value in highestLetterFrequency
+    for ( var values in highestLetterFrequency ) {
+      //if values key in highestLetterFrequency object is greater than count
+      if ( highestLetterFrequency[values] > count ) {
+        //set count equal to values key in highestLetterFrequency
+        count = highestLetterFrequency[values];
+        //set finalWord 
+        finalWord = words;
+      }
+    }
+  }
+  //discounting trivial case
+  if ( count !== 1 ) {
+    return finalWord;
+  }
+  return -1
 }
