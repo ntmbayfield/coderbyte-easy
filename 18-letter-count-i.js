@@ -51,7 +51,7 @@ function LetterCountI(str){
       }
     }
   }
-  //discounting trivial case
+  //if trivial case is NOT true
   if ( count !== 1 ) {
     return finalWord;
   }
