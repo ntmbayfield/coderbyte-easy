@@ -9,7 +9,10 @@
 // Input = "hooplah"   ||  Output = "ahhloop"
 
 function AlphabetSoup(str) { 
-
-return str.split("").sort().join("");
-         
+  //wraps in quotes each letter in str argument and puts in array 
+  return str.split("")
+  //sorts each letter according to its Unicode code point value
+            .sort()
+  //rejoins arrayified str           
+            .join("");      
 }
