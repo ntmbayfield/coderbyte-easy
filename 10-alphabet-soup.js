@@ -13,6 +13,6 @@ function AlphabetSoup(str) {
   return str.split("")
   //sorts each letter according to its Unicode code point value
             .sort()
-  //rejoins arrayified str           
-            .join("");      
+  //rejoins arrayified str          
+            .join("");
 }
