@@ -8,8 +8,29 @@
 // Input = "coderbyte" ||  Output = 3
 
 function VowelCount(str) { 
-
-  // code goes here  
-  return str; 
-         
+  //splits str argument into array of stringified letters
+  var arrayOfLetters = str.split(""); 
+  //sets counter equal to zero
+  var vowelCounter = 0;
+  //for-loop passing through length of str argument
+  for ( var i = 0; i < str.length; i ++ ) {
+    //if letter in array is an 'a' 
+    if ( str[i] === 'a') {
+      //increment counter
+      vowelCounter++;
+    }
+    if ( str[i] === 'e') {
+      vowelCounter++;
+    }
+    if ( str[i] === 'i') {
+      vowelCounter++;
+    }
+    if ( str[i] === 'o') {
+      vowelCounter++;
+    }
+    if ( str[i] === 'u') {
+      vowelCounter++;
+    }
+  }
+  return vowelCounter;
 }
