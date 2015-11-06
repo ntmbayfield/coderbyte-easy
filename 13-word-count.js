@@ -9,7 +9,8 @@
 
 function WordCount(str) { 
 
-  // code goes here  
-  return str; 
+  //splits the str argument into an array of individual words
+  //whose length is equal to the total word count
+  return str.split(" ").length; 
          
 }
