@@ -14,23 +14,16 @@ function VowelCount(str) {
   var vowelCounter = 0;
   //for-loop passing through length of str argument
   for ( var i = 0; i < str.length; i ++ ) {
-    //if letter in array is an 'a' 
-    if ( str[i] === 'a') {
+    //if letter in array is an 'a', 'e', 'i', 'o' or 'u'
+    if ( str[i] === 'a' || 
+         str[i] === 'e' ||
+         str[i] === 'i' ||
+         str[i] === 'o' ||
+         str[i] === 'u') {
       //increment counter
       vowelCounter++;
     }
-    if ( str[i] === 'e') {
-      vowelCounter++;
-    }
-    if ( str[i] === 'i') {
-      vowelCounter++;
-    }
-    if ( str[i] === 'o') {
-      vowelCounter++;
-    }
-    if ( str[i] === 'u') {
-      vowelCounter++;
-    }
   }
+  //output number of vowels counted in str argument
   return vowelCounter;
 }
