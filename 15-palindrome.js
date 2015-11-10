@@ -10,8 +10,12 @@
 // Input = "eye"                 ||  Output = "true"
 
 function Palindrome(str) { 
-
-  // code goes here  
-  return str; 
-         
+  var palindromize = str.split("")
+                      .reverse()
+                      .join("");       
+  if ( palindromize === str ) {
+    return true;
+  } else {
+    return false;
+  }
 }
