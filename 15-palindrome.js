@@ -10,15 +10,20 @@
 // Input = "eye"                 ||  Output = "true"
 
 function Palindrome(str) {
+  //.replace removes any white space characters from str argument
+  var nonPalindromize = str.replace(/\s/g, '');
+
+  //removes any white space characters from str argument
+  var palindromize = str.replace(/\s/g, '')
   //arrayifies and individually quote-wraps each letter in the string 
-  var palindromize = str.split("")
+                          .split("")
   //reverses order of individual letters
-                      .reverse()
+                          .reverse()
   //rejoins individual letters into one string
-                      .join("");
+                          .join("");
 
   //if palindromize is exactly equal to the initial str argument       
-  if ( palindromize === str ) {
+  if ( nonPalindromize === palindromize ) {
     //true
     return true;
   } else {
