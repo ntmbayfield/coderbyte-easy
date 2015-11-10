@@ -23,13 +23,21 @@ function ExOh(str) {
     if ( stringifiedXOs[i] === "x" ) {
       //increment x-counter
       countXs++;
-    } else {
+    }
+    //else letter must be an "o"
+    else
+    {
+      //therefore increment o-counter
       countOs++;
     }
   }
+  //if o-counter is equal to x-counter
   if ( countOs === countXs ) {
     return true;
-  } else {
+  }
+  // o-counter is NOT equal to x-counter
+  else
+  {
     return false;
   }
 }
