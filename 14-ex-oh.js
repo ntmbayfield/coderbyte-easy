@@ -11,11 +11,17 @@
 // Input = "x"       ||  Output = "false"
 
 function ExOh(str) { 
+  //counter for "o"
   var countOs = 0;
+  //counter for "x"
   var countXs = 0;
+  //arrayifies string and quote-wraps each individual letter  
   var stringifiedXOs = str.split("");
+  //for-loop passing along the length of stringifiedXOs
   for ( var i = 0; i < stringifiedXOs.length; i++ ) {
+    //if letter at index i is an "x"
     if ( stringifiedXOs[i] === "x" ) {
+      //increment x-counter
       countXs++;
     } else {
       countOs++;
