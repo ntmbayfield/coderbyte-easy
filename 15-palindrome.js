@@ -12,7 +12,6 @@
 function Palindrome(str) {
   //.replace removes any white space characters from str argument
   var nonPalindromize = str.replace(/\s/g, '');
-
   //removes any white space characters from str argument
   var palindromize = str.replace(/\s/g, '')
   //arrayifies and individually quote-wraps each letter in the string 
