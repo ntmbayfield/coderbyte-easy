@@ -9,13 +9,20 @@
 // Input = "never odd or even"   ||  Output = "true"
 // Input = "eye"                 ||  Output = "true"
 
-function Palindrome(str) { 
+function Palindrome(str) {
+  //arrayifies and individually quote-wraps each letter in the string 
   var palindromize = str.split("")
+  //reverses order of individual letters
                       .reverse()
-                      .join("");       
+  //rejoins individual letters into one string
+                      .join("");
+
+  //if palindromize is exactly equal to the initial str argument       
   if ( palindromize === str ) {
+    //true
     return true;
   } else {
+    //false
     return false;
   }
 }
