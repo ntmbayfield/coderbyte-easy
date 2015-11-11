@@ -17,6 +17,7 @@
 
 function ArithGeo(arr) {
 
+  //first set boolean flags to false
   var arithCheck = false;
   var geoCheck = false;
 
@@ -26,11 +27,15 @@ function ArithGeo(arr) {
     var quotient = [];
     var arrEnd = arr.length-1;
 
+    //for-loop passing from the diff array's end to its beginning
     for ( var i = arrEnd; i > 0; i-- ) {
+      //
       diff.push(arr[i]-arr[i-1]);
     }
 
+    //for-loop passing from the quotient array's end to its beginning
     for ( var i = arrEnd; i > 0; i-- ) {
+      //
       quotient.push(arr[i]/arr[i-1]);
     }
 
