@@ -15,9 +15,47 @@
 // Input = 5,10,15     ||  Output = "Arithmetic"
 // Input = 2,4,16,24   ||  Output = -1
 
-function ArithGeo(arr) { 
+function ArithGeo(arr) {
 
-  // code goes here  
-  return arr; 
-         
+  var arithCheck = false;
+  var geoCheck = false;
+
+  var checker = function(arr) {
+
+    var diff = [];
+    var quotient = [];
+    var arrEnd = arr.length-1;
+
+    for ( var i = arrEnd; i > 0; i-- ) {
+      diff.push(arr[i]-arr[i-1]);
+    }
+
+    for ( var i = arrEnd; i > 0; i-- ) {
+      quotient.push(arr[i]/arr[i-1]);
+    }
+
+    var allTheSame = function(arr) {
+      var first = arr[0];
+      return arr.every(function(element) {
+        return element === first;
+      });
+    };
+
+    if ( allTheSame(diff) === true ) {
+      arithCheck = true;
+    } else 
+    if ( allTheSame(quotient) === true ) {
+      geoCheck = true;
+    }
+  }
+  checker(arr);
+
+  if ( arithCheck === true ) {
+    return "Arithmetic"
+  } else 
+  if ( geoCheck === true ) {
+    return "Geometric"
+  } else {
+    return -1;
+  }
 }
