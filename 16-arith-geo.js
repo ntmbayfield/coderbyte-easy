@@ -43,28 +43,41 @@ function ArithGeo(arr) {
       quotient.push(arr[i]/arr[i-1]);
     }
 
+    //checks if all the elements in a given array are identical
     var allTheSame = function(arr) {
+      //defines first element in arr
       var first = arr[0];
+      //checks if each element in arr argument
       return arr.every(function(element) {
+        //is equal to the first element in arr argument
         return element === first;
       });
     };
 
+    //if differences are all the same
     if ( allTheSame(diff) === true ) {
+      //series in initial arr argument is arithemtic
       arithCheck = true;
-    } else 
+    } else
+    // quotients are all the same
     if ( allTheSame(quotient) === true ) {
+      //series in initial arr argument is geometric
       geoCheck = true;
     }
   }
+  //run checker function
   checker(arr);
 
+  //if arithCheck is true
   if ( arithCheck === true ) {
     return "Arithmetic"
   } else 
+  //if geoCheck is true
   if ( geoCheck === true ) {
     return "Geometric"
-  } else {
+  } 
+  //else neither of them are true
+  else {
     return -1;
   }
 }
