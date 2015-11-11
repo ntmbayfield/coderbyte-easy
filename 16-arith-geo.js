@@ -23,19 +23,23 @@ function ArithGeo(arr) {
 
   var checker = function(arr) {
 
+    //will hold the differences between elements in the initial arr argument
     var diff = [];
+    //will hold the quotients between elements in the initial arr argument
     var quotient = [];
     var arrEnd = arr.length-1;
 
-    //for-loop passing from the diff array's end to its beginning
+    //for-loop passing from diff array's end to its beginning
     for ( var i = arrEnd; i > 0; i-- ) {
-      //
+      //populating diff array with
+      //the difference (arr[i] - arr[i-1])
       diff.push(arr[i]-arr[i-1]);
     }
 
-    //for-loop passing from the quotient array's end to its beginning
+    //for-loop passing from quotient array's end to its beginning
     for ( var i = arrEnd; i > 0; i-- ) {
-      //
+      //populating quotient array with
+      //the quotient (arr[i] / arr[i-1])
       quotient.push(arr[i]/arr[i-1]);
     }
 
