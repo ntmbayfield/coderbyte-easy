@@ -11,6 +11,8 @@
 // Input = 5,7,16,1,2    ||  Output = "false"
 // Input = 3,5,-1,8,12   ||  Output = "true"
 
+//not the clearest solution
+//will refactor
 function ArrayAdditionI(arr) { 
   //sort arr argument from least to greatest
   var leastToGreatest = arr.sort(function(a,b){
@@ -20,12 +22,18 @@ function ArrayAdditionI(arr) {
   var largest = leastToGreatest.pop();
 
   function recursion(target,array){
+    //base case when array is empty
     if ( array.length === 0 ) {
       return target === 0; 
     }
+    //selects smallest number in the array
     var n = array[0];
+    //removes the smallest number from the rest of the array argument
     var array = array.slice(1);
+
+    //checks if target === an item in the array
+    //if not, subtracts n from target and recurses
     return recursion(target,array) || recursion(target - n, array);
   }
-  return recursion(largest,arr);        
+  return recursion(largest,leastToGreatest);        
 }
