@@ -12,8 +12,20 @@
 // Input = 3,5,-1,8,12   ||  Output = "true"
 
 function ArrayAdditionI(arr) { 
+  //sort arr argument from least to greatest
+  var leastToGreatest = arr.sort(function(a,b){
+    return a - b;
+  });
+  //largest element in the arr
+  var largest = leastToGreatest.pop();
 
-  // code goes here  
-  return arr; 
-         
+  function recursion(target,array){
+    if ( array.length === 0 ) {
+      return target === 0; 
+    }
+    var n = array[0];
+    var array = array.slice(1);
+    return recursion(target,array) || recursion(target - n, array);
+  }
+  return recursion(largest,arr);        
 }
