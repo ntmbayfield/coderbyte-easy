@@ -12,26 +12,27 @@
 
 function SecondGreatLow(arr) { 
 
-  //base case - if arr argument has only two elements
+  //trivial case - if arr argument has only two elements
   if ( arr.length === 2 ) {
+    //convert arr into string
     return arr.join(" ");
   }
 
   var output = [];
-
+  //sorts arr argument from least to greatest
   var sorted = arr.sort(function(a,b){return a-b});
-  //==> sorted = [7,7,12,98,106];
-
+  //removes first element from sorted
   var firstGuy = sorted.shift();
-  //==> firstGuy = 7
 
+  //if firstGuy IS the first element in sorted
   if ( firstGuy === sorted[0] ) {
+    //then push second element into 
     output.push(sorted.slice(1,2));
   } else {
     output.push(sorted.slice(0,1));
   }
-  //==> output = [12];
 
+  //removes last element from sorted
   var lastGuy = sorted.pop();
 
   if ( lastGuy === sorted[sorted.length-1] ) {
