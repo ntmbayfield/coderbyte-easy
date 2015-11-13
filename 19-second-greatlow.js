@@ -26,19 +26,24 @@ function SecondGreatLow(arr) {
 
   //if firstGuy IS the first element in sorted
   if ( firstGuy === sorted[0] ) {
-    //then push second element into 
+    //then push second element into output array
     output.push(sorted.slice(1,2));
   } else {
+    //else push first element into output array
     output.push(sorted.slice(0,1));
   }
 
   //removes last element from sorted
   var lastGuy = sorted.pop();
 
+  //if lastGuy IS equal to the last element in the array
   if ( lastGuy === sorted[sorted.length-1] ) {
+    //push the second-to-the-last element into output array
     output.push(sorted.slice(sorted.length-3, sorted.length-2));
   } else {
+    //else push last element of sorte
     output.push(sorted.pop());
   }
+  //stringify then return output array
   return output.join(" ");
 }
