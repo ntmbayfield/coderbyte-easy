@@ -21,9 +21,9 @@ function SecondGreatLow(arr) {
   var output = [];
   //sorts arr argument from least to greatest
   var sorted = arr.sort(function(a,b){return a-b});
+
   //removes first element from sorted
   var firstGuy = sorted.shift();
-
   //if firstGuy IS the first element in sorted
   if ( firstGuy === sorted[0] ) {
     //then push second element into output array
@@ -35,13 +35,12 @@ function SecondGreatLow(arr) {
 
   //removes last element from sorted
   var lastGuy = sorted.pop();
-
-  //if lastGuy IS equal to the last element in the array
+  //if lastGuy IS the last element in sorted
   if ( lastGuy === sorted[sorted.length-1] ) {
-    //push the second-to-the-last element into output array
+    //push sorted's second-to-the-last element into output array
     output.push(sorted.slice(sorted.length-3, sorted.length-2));
   } else {
-    //else push last element of sorte
+    //else push sorted's last element
     output.push(sorted.pop());
   }
   //stringify then return output array
