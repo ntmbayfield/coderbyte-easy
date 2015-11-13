@@ -12,7 +12,32 @@
 
 function SecondGreatLow(arr) { 
 
-  // code goes here  
-  return arr; 
-         
+  //base case - if arr argument has only two elements
+  if ( arr.length === 2 ) {
+    return arr.join(" ");
+  }
+
+  var output = [];
+
+  var sorted = arr.sort(function(a,b){return a-b});
+  //==> sorted = [7,7,12,98,106];
+
+  var firstGuy = sorted.shift();
+  //==> firstGuy = 7
+
+  if ( firstGuy === sorted[0] ) {
+    output.push(sorted.slice(1,2));
+  } else {
+    output.push(sorted.slice(0,1));
+  }
+  //==> output = [12];
+
+  var lastGuy = sorted.pop();
+
+  if ( lastGuy === sorted[sorted.length-1] ) {
+    output.push(sorted.slice(sorted.length-3, sorted.length-2));
+  } else {
+    output.push(sorted.pop());
+  }
+  return output.join(" ");
 }
