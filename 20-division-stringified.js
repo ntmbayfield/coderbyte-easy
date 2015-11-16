@@ -15,7 +15,8 @@ function DivisionStringified(num1,num2) {
   //rounds number to closet integer amount
   var divided = Math.round(num1/num2);
 
-  var commaAdder = divided.toLocaleString();
+  //stringifies number
+  var commaAdder = divided.toString();
   return commaAdder;  
 
 } 
