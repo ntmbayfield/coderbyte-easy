@@ -12,7 +12,10 @@
 
 function DivisionStringified(num1,num2) { 
 
-  // code goes here  
-  return num1 + num2; 
-         
-}
+  //rounds number to closet integer amount
+  var divided = Math.round(num1/num2);
+
+  var commaAdder = divided.toLocaleString();
+  return commaAdder;  
+
+} 
