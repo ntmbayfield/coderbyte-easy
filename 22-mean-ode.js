@@ -31,12 +31,20 @@ function MeanMode(arr) {
   }
   
   for (var key in modeHolder) {
+    //if modeHolder's key is greater than modeCount
     if(modeHolder[key] > modeCount) {
+      //set modeCount equal to modeHolder's key
       modeCount = modeHolder[key];
+      //set mode equal to a integer-ized string value
       mode = parseInt(key);
     }
   }
   
-  if (mode === mean) return 1;
-  else return 0;
+  //if mode is exactly equal to mean
+  if (mode === mean) {
+    //as specified by the toy problem
+    return 1;
+  } else {
+    return 0;
+  }
 }
