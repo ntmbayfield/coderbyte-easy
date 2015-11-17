@@ -6,8 +6,8 @@
 // and will not contain more than one mode. 
 
 // Correct Sample Output
-// Input = 1, 2, 3         ||  Output = 0
-// Input = 4, 4, 4, 6, 2   ||  Output = 1
+// Input = [1, 2, 3, 100]    ||  Output = 0
+// Input = [4, 4, 4, 6, 2]   ||  Output = 1
 
 function MeanMode(arr) { 
   
@@ -17,11 +17,15 @@ function MeanMode(arr) {
   //calculates mean for arr argument
   var mean = arr.reduce(function(a,b){return a+b})/arr.length;
   
+  //for-loop passing along the length of arr argument
   for (var i = 0; i < arr.length; i++) {
-    if(modeHolder[arr[i]]) {
+    //if modeHolder has a value at a given arr's index
+    if ( modeHolder[arr[i]] ) {
+      //increment the value
       modeHolder[arr[i]]++;
     }
     else {
+      //else set key's value equal to 1
       modeHolder[arr[i]] = 1;
     }
   }
