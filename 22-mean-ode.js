@@ -10,8 +10,28 @@
 // Input = 4, 4, 4, 6, 2   ||  Output = 
 
 function MeanMode(arr) { 
-
-  // code goes here  
-  return arr; 
-         
+  
+  var modeHolder = {};
+  var modeCount = 0;
+  var mode;
+  var mean = arr.reduce(function(a,b){return a+b})/arr.length;
+  
+  for (var i = 0; i < arr.length; i++) {
+    if(modeHolder[arr[i]]) {
+      modeHolder[arr[i]]++;
+    }
+    else {
+      modeHolder[arr[i]] = 1;
+    }
+  }
+  
+  for (var key in modeHolder) {
+    if(modeHolder[key] > modeCount) {
+      modeCount = modeHolder[key];
+      mode = parseInt(key);
+    }
+  }
+  
+  if (mode === mean) return 1;
+  else return 0;
 }
