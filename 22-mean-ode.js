@@ -7,13 +7,14 @@
 
 // Correct Sample Output
 // Input = 1, 2, 3         ||  Output = 0
-// Input = 4, 4, 4, 6, 2   ||  Output = 
+// Input = 4, 4, 4, 6, 2   ||  Output = 1
 
 function MeanMode(arr) { 
   
   var modeHolder = {};
   var modeCount = 0;
-  var mode;
+  var mode = 0;
+  //calculates mean for arr argument
   var mean = arr.reduce(function(a,b){return a+b})/arr.length;
   
   for (var i = 0; i < arr.length; i++) {
