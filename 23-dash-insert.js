@@ -10,12 +10,16 @@
 function DashInsert(str) { 
   //stringifies integer argument
   var stringify = str.toString();
+  //empty string for output
   var output = "";
-
+  //for-loop passing through the length of the stringified argument
   for ( var i = 0; i < stringify.length; i++ ) {
+    //if BOTH stringify[i] is odd AND the its preceeding number is ALSO odd
     if ( (stringify[i] % 2 === 1) && (stringify[i - 1] % 2 === 1) ) {
+      //add a dash between those numbers
       output += "-";
     }
+    //then add 
     output += stringify[i];
   }
   return output
