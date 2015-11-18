@@ -19,7 +19,7 @@ function DashInsert(str) {
       //add a dash between those numbers
       output += "-";
     }
-    //then add 
+    //then add the modified string to the output
     output += stringify[i];
   }
   return output
