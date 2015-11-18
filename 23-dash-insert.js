@@ -8,8 +8,15 @@
 // Input = 56730   ||  Output = 567-30
 
 function DashInsert(str) { 
+  //stringifies integer argument
+  var stringify = str.toString();
+  var output = "";
 
-  // code goes here  
-  return str; 
-         
+  for ( var i = 0; i < stringify.length; i++ ) {
+    if ( (stringify[i] % 2 === 1) && (stringify[i - 1] % 2 === 1) ) {
+      output += "-";
+    }
+    output += stringify[i];
+  }
+  return output
 }
