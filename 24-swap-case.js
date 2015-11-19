@@ -10,12 +10,21 @@
 
 function SwapCase(str) { 
   var caseSwapped = "";
+  //for-loop passing through str argument's length
   for ( var i = 0; i < str.length; i++ ) {
+    //if character at str[i] is uppercase
     if ( str[i] === str[i].toUpperCase() ) {
+      //change to lowercase and add to output string
       caseSwapped += str[i].toLowerCase();
-    } else if ( str[i] === str[i].toLowerCase() ) {
+    }
+    //if character at str[i] is lowercase
+    else if ( str[i] === str[i].toLowerCase() ) {
+      //change to uppercase and add to output string
       caseSwapped += str[i].toUpperCase();
-    } else {
+    }
+    //else str[i] character is not in alphabet
+    else {
+      //so add to output string
       caseSwapped += str[i];
     }
   }
