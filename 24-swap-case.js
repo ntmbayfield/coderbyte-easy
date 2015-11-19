@@ -9,8 +9,15 @@
 // Input = "Sup DUDE!!?"  ||  Output = "sUP dude!!?"
 
 function SwapCase(str) { 
-
-  // code goes here  
-  return str; 
-         
+  var caseSwapped = "";
+  for ( var i = 0; i < str.length; i++ ) {
+    if ( str[i] === str[i].toUpperCase() ) {
+      caseSwapped += str[i].toLowerCase();
+    } else if ( str[i] === str[i].toLowerCase() ) {
+      caseSwapped += str[i].toUpperCase();
+    } else {
+      caseSwapped += str[i];
+    }
+  }
+  return caseSwapped;     
 }
