@@ -12,9 +12,14 @@
 // Input = "75Number9"           ||  Output = 84
 // Input = "10 2One Number*1*"   ||  Output = 13
 
-function NumberAddition(str) { 
-
-  // code goes here  
-  return str; 
-         
+function NumberAddition(str) {
+  var summableArray = [];
+  var replacer = str.replace(/\D/g, " ");
+  var splitter = replacer.split(" ");
+  var filtered = splitter.filter(Boolean);
+  for ( var i = 0; i < filtered.length; i++ ) {
+    summableArray.push(Number(filtered[i]));
+  }
+  var sum = summableArray.reduce(function(a,b){ return a+b});
+  return sum;
 }
